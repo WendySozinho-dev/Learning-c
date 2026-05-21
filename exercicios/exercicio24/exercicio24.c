@@ -15,7 +15,14 @@ int main() {
 
 
 	do{
-		if(escolha==0)
+		
+			
+		if(escolha<0 || escolha>0){
+		while(escolha<0 || escolha>0){
+			printf("erro opção inexistente\ntente uma opção válida");
+			scanf("%d",&escolha);
+		}
+		}if(escolha==0)
 			break;
 		
 		printf("\ndigita o primeiro valor\n\n");
@@ -29,6 +36,7 @@ int main() {
 	}while(escolha==4 && valor1==0);
 	if(escolha==0)
 		break;
+	
 
 	//tratando a escolha do usuario
 	switch(escolha){
@@ -45,8 +53,6 @@ int main() {
 			case 4:
 				resultado=valor1-valor2;
 				break;
-			default:
-				printf("erro, opcao inesistente");
 		}
 	printf("o resultado da operação entre %.2f e %.2f deu %.2f",valor1,valor2,resultado);
 	
