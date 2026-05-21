@@ -13,17 +13,14 @@ int main() {
 
 //lendo os dados do usuario e tratando a divisao por zero
 
-
+	while(escolha<0 || escolha>4){
+	
+		printf("erro escolha inválida escolha um valor válido de 0 a 4\n\t");
+		scanf("%d",&escolha);
+	}
+	if(escolha==0)
+		break;
 	do{
-		
-			
-		if(escolha<0 || escolha>0){
-		while(escolha<0 || escolha>0){
-			printf("erro opção inexistente\ntente uma opção válida");
-			scanf("%d",&escolha);
-		}
-		}if(escolha==0)
-			break;
 		
 		printf("\ndigita o primeiro valor\n\n");
 		scanf("%f",&valor1);
