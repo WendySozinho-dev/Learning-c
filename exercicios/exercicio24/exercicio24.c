@@ -7,7 +7,8 @@ int main() {
 	//criando o menu de escolha
 	int escolha;
 	float valor1,valor2,resultado=0;
-	do{
+	while(1)
+	{
 		printf("\neis as escolhas\n0 sair\n1 somar\n2 subtrair\n3 multiplicar\n4 dividir\n\t");
 		scanf("%d",&escolha);
 
@@ -28,11 +29,10 @@ int main() {
 		scanf("%f",&valor2);
 
 		if(valor1==0 && escolha==4)
-			printf("\nerro, impossivel dividir %f por 0\n",valor1);
+			printf("\nerro, impossivel dividir %.2f por 0\n",valor2);
 		
 	}while(escolha==4 && valor1==0);
-	if(escolha==0)
-		break;
+	
 	
 
 	//tratando a escolha do usuario
@@ -48,13 +48,13 @@ int main() {
 				resultado=valor1*valor2;
 				break;
 			case 4:
-				resultado=valor1-valor2;
+				resultado=valor1/valor2;
 				break;
 		}
 	printf("o resultado da operação entre %.2f e %.2f deu %.2f",valor1,valor2,resultado);
 	
 
-	}while(escolha!=0);
+	}
 	
 
 	return 0;
